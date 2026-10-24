@@ -9,7 +9,7 @@
 
 A "no" is always a valid answer. Both tracks are built to avoid confident-sounding decisions that rest on thin evidence.
 
-> Built by **Hero Minutes** with Claude Code. See the [case study](docs/CASE-STUDY.md) for how it was designed, tested against real runs, and corrected where testing found it wrong, and the [examples](examples/) for what it produces.
+> Built by **Jamil H. ([Hero Minutes](https://github.com/herominutes))** with Claude Code. See the [case study](docs/CASE-STUDY.md) for how it was designed, tested against real runs, and corrected where testing found it wrong, and the [examples](examples/) for what it produces.
 
 ## How it works
 ```mermaid
@@ -89,4 +89,4 @@ The plugin is `hero` and the skill is `gogoidea`, so you run it as **`/hero:gogo
 ## Credits and licence
 The Idea track was inspired by a public social-media post describing an "idea council" style workflow, and by the widely taught practice of design strategy and human-centred design. This is an independent implementation with no affiliation to any author, company or design firm. The frameworks used (jobs-to-be-done, MECE issue trees, premortems, Kano, severity-based release gating, and others) are widely known methods, not any firm's proprietary material.
 
-Licence: [MIT](LICENSE) © 2026 Hero Minutes. The software is provided as is, without warranty; its recommendations are decision support, not business, legal, security or financial advice.
+Licence: [MIT](LICENSE) © 2026 Jamil H. (Hero Minutes). The software is provided as is, without warranty; its recommendations are decision support, not business, legal, security or financial advice.

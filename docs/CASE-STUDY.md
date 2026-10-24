@@ -1,6 +1,6 @@
 # Case study: building GoGoIdea
 
-How a Claude Code plugin with two decision checkpoints was designed, tested against real runs, and corrected where testing found it wrong. Built with Claude Code, directed by Hero Minutes.
+How a Claude Code plugin with two decision checkpoints was designed, tested against real runs, and corrected where testing found it wrong. Built with Claude Code, directed by Jamil H. (Hero Minutes).
 
 ## The problem
 Builders make two expensive calls on instinct:
