@@ -13,19 +13,13 @@ A "no" is always a valid answer. Both tracks are built to avoid confident-soundi
 
 ## How it works
 ```mermaid
-flowchart TD
-  U["You: /hero:gogoidea"] --> R{"Router picks a track"}
-  R --> IT["Idea track"]
-  R --> GT["Gate track"]
-  IT --> I1["Brief"] --> I2["Evidence"] --> I3["Ideas"] --> I4["Judge"] --> I5["Decide and test"]
-  GT --> G1["Frame"] --> G2["Collect"] --> G3["Review"] --> G4["Score"] --> G5["Decide and close"]
-  I2 -. "fetch and verify" .-> S1["Scripts check quotes and counts"]
-  G2 -. "read-only scan" .-> S2["Scripts check files, lines and counts"]
-  I4 --> V["Isolated reviewers, blind scoring, hard gates"]
-  G3 --> V
-  S1 --> V
-  S2 --> V
-  V --> O["Decision record, carry-over, next steps"]
+flowchart LR
+  U["/hero:gogoidea"] --> R{"Pick a track"}
+  R --> I["IDEA track<br/>Brief → Evidence → Ideas<br/>→ Judge → Decide and test"]
+  R --> G["GATE track<br/>Frame → Collect → Review<br/>→ Score → Decide and close"]
+  I --> V["Scripts check quotes, files, lines and counts<br/>Isolated reviewers score blind<br/>Hard gates cut"]
+  G --> V
+  V --> O["Decision record<br/>and next steps"]
 ```
 
 ### Idea track in 5 steps
