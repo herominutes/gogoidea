@@ -1,0 +1,62 @@
+{
+  "strategy": {
+    "reviewer": {
+      "score": 4,
+      "note": "Sprint goal met; one piece of unplanned work."
+    }
+  },
+  "security": {
+    "reviewer": {
+      "score": 4,
+      "note": "Token now in the Keychain, no logging, HTTPS only. Re-checked by counting."
+    }
+  },
+  "privacy": {
+    "reviewer": {
+      "score": 3,
+      "note": "No tracking found; privacy manifest missing."
+    }
+  },
+  "auth": {
+    "reviewer": {
+      "score": 3,
+      "note": "Flows exist; no account deletion."
+    }
+  },
+  "functionality": {
+    "reviewer": {
+      "score": 4,
+      "note": "Core list flows work in the walkthrough."
+    }
+  },
+  "quality": {
+    "reviewer": {
+      "score": 3,
+      "note": "No tests; one force-try."
+    }
+  },
+  "journey": {
+    "reviewer": {
+      "score": 4,
+      "note": "Reaches first value quickly; empty first screen."
+    }
+  },
+  "ux": {
+    "reviewer": {
+      "score": 4,
+      "note": "Consistent and readable."
+    }
+  },
+  "data": {
+    "reviewer": {
+      "score": 4,
+      "note": "List contents round-trip correctly in the walkthrough."
+    }
+  },
+  "release": {
+    "reviewer": {
+      "score": 3,
+      "note": "Version set; test key in source."
+    }
+  }
+}

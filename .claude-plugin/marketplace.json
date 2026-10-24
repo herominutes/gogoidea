@@ -1,0 +1,16 @@
+{
+  "name": "hero-market",
+  "owner": {
+    "name": "Hero Minutes"
+  },
+  "plugins": [
+    {
+      "name": "hero",
+      "source": "./",
+      "description": "Idea track: decide what to build. Gate track: decide whether to close the sprint, ship and archive the build."
+    }
+  ],
+  "metadata": {
+    "description": "Marketplace for Hero Minutes plugins: GoGoIdea go/no-go checkpoints for builders."
+  }
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "F-001",
+    "lens": "security",
+    "severity": "S1",
+    "title": "Session token stored in UserDefaults and printed to the log",
+    "evidence": [
+      {
+        "type": "count",
+        "path": "PocketPantry/Auth/SessionStore.swift",
+        "pattern": "UserDefaults",
+        "expected": 0
+      },
+      {
+        "type": "count",
+        "path": "PocketPantry/Auth/SessionStore.swift",
+        "pattern": "print\\(.*token",
+        "expected": 0
+      }
+    ],
+    "strategic_impact": "core",
+    "exposure": "all",
+    "status": "fixed",
+    "owner": null,
+    "due": null,
+    "blocker": false,
+    "recommendation": "Store the token in the Keychain and remove the log line.",
+    "reviewer": "security"
+  },
+  {
+    "id": "F-002",
+    "lens": "security",
+    "severity": "S2",
+    "title": "API base URL uses cleartext HTTP",
+    "evidence": [
+      {
+        "type": "count",
+        "path": "PocketPantry/Network/API.swift",
+        "pattern": "http://",
+        "expected": 0
+      }
+    ],
+    "strategic_impact": "core",
+    "exposure": "all",
+    "status": "fixed",
+    "owner": "Sam",
+    "due": "2026-11-02",
+    "blocker": false,
+    "recommendation": "Serve the API over HTTPS and update the base URL.",
+    "reviewer": "security"
+  },
+  {
+    "id": "F-003",
+    "lens": "auth",
+    "severity": "S2",
+    "title": "No way to delete an account",
+    "evidence": [
+      {
+        "type": "count",
+        "path": "PocketPantry/Auth/SessionStore.swift",
+        "pattern": "(?i)delete[ _-]?account|deleteAccount",
+        "expected": 0
+      },
+      {
+        "type": "manual",
+        "note": "Walked Settings on a simulator: no delete-account option"
+      }
+    ],
+    "strategic_impact": "core",
+    "exposure": "all",
+    "status": "open",
+    "owner": "Sam",
+    "due": "2026-11-09",
+    "blocker": false,
+    "recommendation": "Add an in-app account deletion flow before submission.",
+    "reviewer": "auth"
+  },
+  {
+    "id": "F-004",
+    "lens": "quality",
+    "severity": "S3",
+    "title": "No automated tests and no CI",
+    "evidence": [
+      {
+        "type": "manual",
+        "note": "Repo scan: 0 test files for 5 source files; no CI configuration found"
+      }
+    ],
+    "strategic_impact": "supporting",
+    "exposure": "all",
+    "status": "open",
+    "owner": null,
+    "due": null,
+    "blocker": false,
+    "recommendation": "Add tests for sign-in and list loading; add a CI workflow.",
+    "reviewer": "quality"
+  },
+  {
+    "id": "F-005",
+    "lens": "privacy",
+    "severity": "S3",
+    "title": "No privacy manifest; camera and photo permissions need a purpose review",
+    "evidence": [
+      {
+        "type": "manual",
+        "note": "Repo scan: 0 privacy manifests, 2 permission strings"
+      }
+    ],
+    "strategic_impact": "supporting",
+    "exposure": "segment",
+    "status": "open",
+    "owner": null,
+    "due": null,
+    "blocker": false,
+    "recommendation": "Add a privacy manifest and confirm the permission text matches use.",
+    "reviewer": "privacy"
+  },
+  {
+    "id": "F-006",
+    "lens": "release",
+    "severity": "S3",
+    "title": "Payment test key is in source code",
+    "evidence": [
+      {
+        "type": "file",
+        "path": "PocketPantry/Config.swift",
+        "line": 1,
+        "snippet": "let stripePublishable"
+      }
+    ],
+    "strategic_impact": "supporting",
+    "exposure": "few",
+    "status": "open",
+    "owner": null,
+    "due": null,
+    "blocker": false,
+    "recommendation": "Read keys from build configuration, one per environment.",
+    "reviewer": "release"
+  },
+  {
+    "id": "F-007",
+    "lens": "quality",
+    "severity": "S4",
+    "title": "Force-try when decoding the list",
+    "evidence": [
+      {
+        "type": "file",
+        "path": "PocketPantry/Views/ListsView.swift",
+        "line": 4,
+        "snippet": "try! JSONDecoder()"
+      }
+    ],
+    "strategic_impact": "peripheral",
+    "exposure": "few",
+    "status": "open",
+    "owner": null,
+    "due": null,
+    "blocker": false,
+    "recommendation": "Handle the decoding error and show a message.",
+    "reviewer": "quality"
+  },
+  {
+    "id": "F-008",
+    "lens": "journey",
+    "severity": "S3",
+    "title": "First launch shows an empty screen with no guidance",
+    "evidence": [
+      {
+        "type": "manual",
+        "note": "Walked first launch on a simulator: blank list, no prompt to add an item"
+      }
+    ],
+    "strategic_impact": "core",
+    "exposure": "segment",
+    "status": "open",
+    "owner": null,
+    "due": null,
+    "blocker": false,
+    "recommendation": "Add an empty state that explains how to add the first item.",
+    "reviewer": "journey"
+  },
+  {
+    "id": "F-009",
+    "lens": "strategy",
+    "severity": "S3",
+    "title": "Unplanned animation work added this sprint",
+    "evidence": [
+      {
+        "type": "manual",
+        "note": "Sprint plan lists no animation work; 6 commits touch it"
+      }
+    ],
+    "strategic_impact": "supporting",
+    "exposure": "few",
+    "status": "open",
+    "owner": null,
+    "due": null,
+    "blocker": false,
+    "recommendation": "Move it to the next sprint or record it as accepted scope.",
+    "reviewer": "strategy"
+  }
+]

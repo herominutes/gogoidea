@@ -1,0 +1,22 @@
+{
+  "name": "hero",
+  "displayName": "GoGoIdea by Hero Minutes",
+  "version": "0.1.0",
+  "description": "Two evidence-based go/no-go checkpoints for builders behind one command: an Idea track (what should I build?) and a Gate track (should we close the sprint, ship and archive the build?).",
+  "author": {
+    "name": "Hero Minutes"
+  },
+  "license": "MIT",
+  "keywords": [
+    "startup",
+    "ideas",
+    "validation",
+    "go-no-go",
+    "release-gate",
+    "sprint",
+    "product",
+    "security",
+    "privacy",
+    "qa"
+  ]
+}

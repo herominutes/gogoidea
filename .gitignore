@@ -1,0 +1,11 @@
+# Run outputs contain scraped third-party text; never publish them
+council-runs/
+test-run/
+judging/
+
+# Python / OS / secrets
+__pycache__/
+*.pyc
+.DS_Store
+.env
+*.local
