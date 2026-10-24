@@ -39,6 +39,8 @@ It follows a design-strategy approach: start from real people's problems, diverg
 
 **Blockers beat scores.** An open critical issue means No-Go however good the average looks, and critical findings can't be "accepted away". Risks that do ship need a named owner and an expiry date. [Example: a build scores 68.3, would clear the bar, and is still NO-GO because of one critical issue.](examples/gate/01-first-gate/decision.md)
 
+<img src="assets/blockers-beat-scores.svg" width="100%" alt="A score bar showing 68.3 out of 100, above the 65 line for GO WITH CONDITIONS, but an open critical issue forces a NO-GO.">
+
 ## Design principles
 - **Evidence is checked by a script, not trusted.** Idea quotes must appear word for word in their source; Gate findings must cite a file and line that exist, or a count the script re-runs.
 - **Reviewing and deciding are separate.** Reviewers work from an isolated packet that holds no one else's scores. The chair re-checks the claims that carry the decision.
@@ -46,6 +48,8 @@ It follows a design-strategy approach: start from real people's problems, diverg
 - **Contained and read-only.** The Gate never edits your repo and writes only to its own folder; the Idea track writes only to its own folder.
 
 ## What's been tested
+
+<img src="assets/testing-at-a-glance.svg" width="100%" alt="Four tiles: 50 unit tests, 2 Idea runs over about 1,400 public items, 1 real project checked, and 10 defects found and fixed.">
 - 50 unit tests for the scorers, verifier, scanner (including secret masking and "never writes to the target repo"), release tool and skill frontmatter. They are kept outside this repo.
 - Two Idea runs on a sample brief over roughly 1,400 public reviews, posts and issues. The standard run ended with **no idea surviving**.
 - A quick Gate on one real web project, checked independently: the project was byte-identical before and after, outputs stayed in the run folder, no secret appeared unmasked, and the scorer reproduced the same decision.

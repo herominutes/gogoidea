@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 270" width="1200" height="270" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">GoGoIdea testing at a glance</title>
+<desc id="d">Four tiles: 50 unit tests, 2 Idea runs over about 1,400 public items, 1 real project checked, and 10 defects found and fixed.</desc>
+<rect width="1200" height="270" rx="14" fill="#0f172a"/>
+<text x="600" y="40" text-anchor="middle" font-size="21" font-weight="700" fill="#f8fafc">How GoGoIdea was tested, and what testing caught</text>
+<rect x="45" y="76" width="255" height="160" rx="12" fill="#111c33" stroke="#60a5fa" stroke-width="2"/>
+<text x="61" y="130" font-size="44" font-weight="800" fill="#60a5fa">50</text>
+<text x="61" y="156" font-size="15.5" font-weight="700" fill="#f8fafc">unit tests</text>
+<text x="61" y="180" font-size="13" fill="#cbd5e1" text-anchor="start" xml:space="preserve"><tspan x="61" dy="0">scorers, verifier, scanner,</tspan><tspan x="61" dy="17">release tool, skill file check</tspan></text>
+<rect x="330" y="76" width="255" height="160" rx="12" fill="#111c33" stroke="#4ade80" stroke-width="2"/>
+<text x="346" y="130" font-size="44" font-weight="800" fill="#4ade80">2</text>
+<text x="346" y="156" font-size="15.5" font-weight="700" fill="#f8fafc">Idea runs</text>
+<text x="346" y="180" font-size="13" fill="#cbd5e1" text-anchor="start" xml:space="preserve"><tspan x="346" dy="0">about 1,400 public items; the</tspan><tspan x="346" dy="17">standard run ended with no idea</tspan><tspan x="346" dy="17">surviving</tspan></text>
+<rect x="615" y="76" width="255" height="160" rx="12" fill="#111c33" stroke="#fbbf24" stroke-width="2"/>
+<text x="631" y="130" font-size="44" font-weight="800" fill="#fbbf24">1</text>
+<text x="631" y="156" font-size="15.5" font-weight="700" fill="#f8fafc">real project</text>
+<text x="631" y="180" font-size="13" fill="#cbd5e1" text-anchor="start" xml:space="preserve"><tspan x="631" dy="0">a quick Gate, checked</tspan><tspan x="631" dy="17">independently; the project was</tspan><tspan x="631" dy="17">byte-identical before and after</tspan></text>
+<rect x="900" y="76" width="255" height="160" rx="12" fill="#111c33" stroke="#c4b5fd" stroke-width="2"/>
+<text x="916" y="130" font-size="44" font-weight="800" fill="#c4b5fd">10</text>
+<text x="916" y="156" font-size="15.5" font-weight="700" fill="#f8fafc">defects found and fixed</text>
+<text x="916" y="180" font-size="13" fill="#cbd5e1" text-anchor="start" xml:space="preserve"><tspan x="916" dy="0">listed in the case study,</tspan><tspan x="916" dy="17">including a wrong "0 matches"</tspan><tspan x="916" dy="17">claim</tspan></text>
+<text x="600" y="258" text-anchor="middle" font-size="12.5" fill="#94a3b8">Numbers are from the repo README and case study. Real-world use will find more gaps.</text>
+</svg>
